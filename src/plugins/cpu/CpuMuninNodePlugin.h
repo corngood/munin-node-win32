@@ -3,19 +3,17 @@
 
 typedef struct
 {
-	DWORD dwUnknown1;
+	ULONG dwUnknown1;
 	ULONG uKeMaximumIncrement;
 	ULONG uPageSize;
 	ULONG uMmNumberOfPhysicalPages;
 	ULONG uMmLowestPhysicalPage;
 	ULONG uMmHighestPhysicalPage;
 	ULONG uAllocationGranularity;
-	PVOID pLowestUserAddress;
-	PVOID pMmHighestUserAddress;
-	ULONG uKeActiveProcessors;
-	BYTE bKeNumberProcessors;
-	BYTE bUnknown2;
-	WORD wUnknown3;
+	ULONG_PTR pLowestUserAddress;
+	ULONG_PTR pMmHighestUserAddress;
+	KAFFINITY uKeActiveProcessors;
+	CHAR bKeNumberProcessors;
 } SYSTEM_BASIC_INFORMATION;
 
 typedef struct
